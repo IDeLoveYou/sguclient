@@ -16,7 +16,7 @@ m = Map("sguclient", translate("SGUClient LuCI"), translate("ShaoGuan University
         .. [[<br/>]]
         .. translate("SGUClient is free, You can get the software and source code from")
         .. [[&nbsp;]]
-        .. [[<a href="https://github.com/dafeiyoung/sguclient" target="_blank">]]
+        .. [[<a href="https://github.com/FurryAcetylCoA/sguclient" target="_blank">]]
         .. translate("Github")
         .. [[</a><br/>]]
         .. translate("QQ Group:")
