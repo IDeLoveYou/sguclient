@@ -26,6 +26,8 @@ m = Map("sguclient", translate("SGUClient LuCI"), translate("ShaoGuan University
         .. [[</a>]]
 )
 
+m:section(SimpleSection).template  = "sguclient/sguclient_status"
+
 s = m:section(TypedSection, "login", "")
 s.addremove = false
 s.anonymous = true

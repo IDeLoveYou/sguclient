@@ -32,6 +32,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_DIR) $(1)/usr/share/sguclient
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/model/cbi/sguclient
+	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/view/sguclient
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/i18n
 
@@ -41,6 +42,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_BIN)  ./files/root/usr/share/sguclient/sgud.sh $(1)/usr/share/sguclient/sgud.sh
 	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/model/cbi/sguclient/log.lua $(1)/usr/lib/lua/luci/model/cbi/sguclient/log.lua
 	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/model/cbi/sguclient/sguclient.lua $(1)/usr/lib/lua/luci/model/cbi/sguclient/sguclient.lua
+	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/view/sguclient/sguclient_status.htm $(1)/usr/lib/lua/luci/view/sguclient/sguclient_status.htm
 	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/controller/sguclient.lua $(1)/usr/lib/lua/luci/controller/sguclient.lua
 	$(INSTALL_DATA) ./i18n/zh-cn/*.lmo $(1)/usr/lib/lua/luci/i18n/
 endef
