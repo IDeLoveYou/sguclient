@@ -66,3 +66,12 @@ msgstr "日志"
 
 msgid "Log file:"
 msgstr "日志路径:"
+
+msgid "Collecting data..."
+msgstr "正在收集数据..."
+
+msgid "RUNNING"
+msgstr "运行中"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
