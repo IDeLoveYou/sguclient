@@ -46,7 +46,7 @@ sgud_loader() {
 start_service() {
 
   config_load sguclient
-  config_foreach sgud_loader login
+  config_foreach sgud_loader sguclient
 
 }
 stop_service() {
