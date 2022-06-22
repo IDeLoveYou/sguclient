@@ -6,7 +6,7 @@ function index()
     end
     entry({ "admin", "network", "sguclient" }, firstchild(), _("SGUClient LuCI"), 80)
     entry({ "admin", "network", "sguclient", "client" }, cbi("sguclient/sguclient"), _("SGUClient LuCI"), 1)
-    entry({ "admin", "network", "sguclient", "Log" }, cbi("sguclient/log"), _("Log"), 2).leaf = true
+    entry({ "admin", "network", "sguclient", "log" }, cbi("sguclient/log"), _("Log"), 2).leaf = true
     entry({ "admin", "network", "sguclient", "status" }, call("act_status")).leaf = true
 end
 
