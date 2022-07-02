@@ -1,1 +1,2 @@
-config sguclient
+
+config sguclient 'config'
