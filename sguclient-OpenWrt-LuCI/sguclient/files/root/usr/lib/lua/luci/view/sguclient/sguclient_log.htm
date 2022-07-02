@@ -1,0 +1,46 @@
+<%# Copyright 2010 Jo-Philipp Wich <jow@openwrt.org>
+Licensed to the public under the Apache License 2.0.
+-%>
+
+<%+header%>
+
+<script type="text/javascript">//<![CDATA[
+    var first_load = true;
+    XHR.poll(1, '<%=url([[admin]], [[network]], [[sguclient]], [[load_log]])%>', null,
+        function (x) {
+            var ta = document.getElementById('sguclient_log');
+            if (ta) {
+                if (x.responseText !== ''){
+                    ta.value = x.responseText;
+                }else{
+                    ta.value = "No Log Found";
+                }
+                var end = ta.scrollHeight - ta.scrollTop - ta.clientHeight;
+                if(first_load || end<70){
+                    ta.scrollTop = ta.scrollHeight;
+                    first_load = false;
+                }
+            }
+        }
+    );
+//]]>
+</script>
+
+
+<div class="cbi-map" id="cbi-sguclient">
+    <h2 name="content">SGUClient Log</h2>
+    <div class="cbi-map-descr">
+        <%:Log file:%>&nbsp;/var/log/sguclient.log
+    </div>
+    <fieldset class="cbi-section">
+        <fieldset class="cbi-section-node">
+            <div class="cbi-value cbi-value-last" data-index="1" data-depends="[]">
+                <textarea class="cbi-input-textarea" style="width: 100%" data-update="change" id="sguclient_log" rows="35" readonly="true"></textarea>
+            </div>
+        </fieldset>
+        <br />
+    </fieldset>
+    <br />
+</div>
+
+<%+footer%>

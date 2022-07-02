@@ -40,9 +40,9 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_CONF) ./files/root/etc/config/sguclient $(1)/etc/config/sguclient
 	$(INSTALL_BIN)  ./files/root/etc/init.d/sguclient $(1)/etc/init.d/sguclient
 	$(INSTALL_BIN)  ./files/root/usr/share/sguclient/sgud.sh $(1)/usr/share/sguclient/sgud.sh
-	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/model/cbi/sguclient/log.lua $(1)/usr/lib/lua/luci/model/cbi/sguclient/log.lua
 	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/model/cbi/sguclient/sguclient.lua $(1)/usr/lib/lua/luci/model/cbi/sguclient/sguclient.lua
 	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/view/sguclient/sguclient_status.htm $(1)/usr/lib/lua/luci/view/sguclient/sguclient_status.htm
+	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/view/sguclient/sguclient_log.htm $(1)/usr/lib/lua/luci/view/sguclient/sguclient_log.htm
 	$(INSTALL_DATA) ./files/root/usr/lib/lua/luci/controller/sguclient.lua $(1)/usr/lib/lua/luci/controller/sguclient.lua
 	$(INSTALL_DATA) ./i18n/zh-cn/*.lmo $(1)/usr/lib/lua/luci/i18n/
 endef
