@@ -88,6 +88,7 @@ SGUClient是很久很久之前弄的一个东西了，编写过程中借(chao)�
     * 适配新版电信心跳包
  - [IDeLoveYou](https://github.com/IDeLoveYou)
    *  重写了多线程处理
+   *  更新LuCI图形化配置页面
    *  软件测试
 
 ## 再说几句
